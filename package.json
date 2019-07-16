@@ -1,0 +1,40 @@
+{
+    "name": "sqlformat",
+    "displayName": "SqlFormat",
+    "description": "Format a SQL",
+    "version": "0.0.1",
+    "publisher": "vagneress",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sqlFormat"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sqlFormat",
+                "title": "Sql Format"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint ./src/*.ts",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.40",
+        "tslint": "^5.16.0",
+        "typescript": "^3.5.1",
+        "@types/vscode": "^1.32.0"
+    },
+    "dependencies": {
+        "request": "^2.88.0"
+    }
+}
